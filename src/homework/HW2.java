@@ -38,7 +38,7 @@ public class HW2 {
         System.out.println("  " + y);
         System.out.println("  " + z);
 
-        System.out.println(subTask1 + x + "," + y + "," + z);
+        System.out.println(subTask1 + x + " " + y + " " + z);
 
         System.out.println( subTask2 + "float x = " + x);
         System.out.println( "  float y = " + y);
@@ -52,6 +52,8 @@ public class HW2 {
         Пример вывода:
         5, 10, 15
        */
+
+        System.out.println(subTask1 + x + "," + y + "," + z);
 
         System.out.println(line);
         System.out.println(task + (++count));
@@ -103,7 +105,7 @@ public class HW2 {
          */
         int lemon = 6;
         int apple2 = lemon + 24;
-        int pear = (lemon + 24) - 12;
+        int pear = apple2 - 12;
         int total = lemon + apple2 + pear;
 
         System.out.println(total + " килограммов фруктов привезли в школьную столовую.");
@@ -163,16 +165,33 @@ public class HW2 {
 
         /*13.выведи таблицу с матем значениями*/
 
-        System.out.printf("---------------------------------------------------%n");
-        System.out.println("| +10 | -5 | *100 | /2 | %2 | ^2 | ++ | -- |");
-        System.out.println(line);
-        System.out.println("| k=5 | 15 | 0 | 500 | 2.5 | 1 | 25 | 6 | 5 |");
-        System.out.println(line);
-        System.out.println("| l=2 | 12 | -3 | 200 | 1 | 0 | 4 | 3 | 2 |");
-        System.out.println(line);
-        System.out.println("| m=7 | 17 | 2 | 700 | 3.5 | 1 | 49 | 8 | 7 |");
-        System.out.println(line);
+//        System.out.printf("-----------------------------------------------|%n");
+//        System.out.println("|     | +10| -5 |*100 | /2  | %2 | ^2 | ++ | --|");
+//        System.out.printf("-----------------------------------------------|%n");
+//        System.out.println("| k=5 | 15 | 0  | 500 | 2.5 | 1  | 25 | 6  | 5 |");
+//        System.out.printf("-----------------------------------------------|%n");
+//        System.out.println("| l=2 | 12 | -3 | 200 |  1  | 0  | 4  | 3  | 2 |");
+//        System.out.printf("-----------------------------------------------|%n");
+//        System.out.println("| m=7 | 17 | 2  | 700 | 3.5 | 1  | 49 | 8  | 7 |");
+//        System.out.printf("-----------------------------------------------|%n");
 
+         int k = 5;
+         int l = 2;
+         int m = 7;
+         String line1 = "|";
+
+        System.out.printf("--------------------------------------------------|%n");
+        System.out.println("|     | +10 | -5 | *100 | /2  | %2 | ^2 | ++ | -- |");
+        System.out.printf("--------------------------------------------------|%n");
+        System.out.println(line1 + "k = 5" + line1 + " " + (k + 10) + "\t" + line1 + " " + (k - 5) + "\t" + line1 + " " + k * 100 + " " + line1
+                + k / 2 + "\t" + line1 + k % 2 + "\t" + line1 + (k^2) + "\t" + line1 + ++k + "\t" + line1 + --k + "\t" + line1);
+        System.out.printf("--------------------------------------------------|%n");
+        System.out.println(line1 + "l = 2" + line1 + (l + 10) + "\t" + line1 + " " + (l - 5)  + line1 + " " + l * 100 + " " + line1
+                + l/ 2 + "\t" + line1 + l % 2 + "\t" + line1 + (l^2) + "\t" + line1 + ++l + "\t" + line1 + --l + "\t" + line1);
+        System.out.printf("--------------------------------------------------|%n");
+        System.out.println(line1 + "m = 7" + line1 + (m + 10) + "\t" + line1 + " " + (m - 5) + "\t" + line1 + " " + m * 100 + " " + line1
+                + m / 2 + "\t" + line1 + m % 2  + "\t"+ line1 + (m^2) + "\t" + line1 + ++m + "\t" + line1 + --m + "\t" + line1);
+        System.out.printf("--------------------------------------------------|%n");
 
 
         System.out.println(line);
