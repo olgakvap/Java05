@@ -165,34 +165,81 @@ public class HW2 {
 
         /*13.выведи таблицу с матем значениями*/
 
-//        System.out.printf("-----------------------------------------------|%n");
-//        System.out.println("|     | +10| -5 |*100 | /2  | %2 | ^2 | ++ | --|");
-//        System.out.printf("-----------------------------------------------|%n");
-//        System.out.println("| k=5 | 15 | 0  | 500 | 2.5 | 1  | 25 | 6  | 5 |");
-//        System.out.printf("-----------------------------------------------|%n");
-//        System.out.println("| l=2 | 12 | -3 | 200 |  1  | 0  | 4  | 3  | 2 |");
-//        System.out.printf("-----------------------------------------------|%n");
-//        System.out.println("| m=7 | 17 | 2  | 700 | 3.5 | 1  | 49 | 8  | 7 |");
-//        System.out.printf("-----------------------------------------------|%n");
-
          int k = 5;
          int l = 2;
          int m = 7;
-         String line1 = "|";
+         String firstLine = "\t_________________________________________________________________________________\n";
+         String vLine = "\t|\t";
+         String endLine = "\t|";
+         String tab =  "\t";
 
-        System.out.printf("--------------------------------------------------|%n");
-        System.out.println("|     | +10 | -5 | *100 | /2  | %2 | ^2 | ++ | -- |");
-        System.out.printf("--------------------------------------------------|%n");
-        System.out.println(line1 + "k = 5" + line1 + " " + (k + 10) + "\t" + line1 + " " + (k - 5) + "\t" + line1 + " " + k * 100 + " " + line1
-                + k / 2 + "\t" + line1 + k % 2 + "\t" + line1 + (k^2) + "\t" + line1 + ++k + "\t" + line1 + --k + "\t" + line1);
-        System.out.printf("--------------------------------------------------|%n");
-        System.out.println(line1 + "l = 2" + line1 + (l + 10) + "\t" + line1 + " " + (l - 5)  + line1 + " " + l * 100 + " " + line1
-                + l/ 2 + "\t" + line1 + l % 2 + "\t" + line1 + (l^2) + "\t" + line1 + ++l + "\t" + line1 + --l + "\t" + line1);
-        System.out.printf("--------------------------------------------------|%n");
-        System.out.println(line1 + "m = 7" + line1 + (m + 10) + "\t" + line1 + " " + (m - 5) + "\t" + line1 + " " + m * 100 + " " + line1
-                + m / 2 + "\t" + line1 + m % 2  + "\t"+ line1 + (m^2) + "\t" + line1 + ++m + "\t" + line1 + --m + "\t" + line1);
-        System.out.printf("--------------------------------------------------|%n");
+         int oldK = k;
 
+        System.out.println(
+                firstLine
+                        + vLine + tab
+                        + vLine + "+10"
+                        + vLine + "-5"
+                        + vLine + "*100"
+                        + vLine + "/2"
+                        + vLine + "%2"
+                        + vLine + "^2"
+                        + vLine + "++"
+                        + vLine + "--"
+                        + endLine
+        );
+
+        System.out.print(
+                firstLine
+                        + vLine + "k = " + k
+                        + vLine + (k + 10)
+                        + vLine + (k - 5)
+                        + vLine + (k * 100) + tab
+                        + vLine + (k / 2)
+                        + vLine + (k % 2)
+                        + vLine + (k * k++)//^2
+                        + vLine + (k--)
+        );
+
+
+        k--;
+
+        System.out.println(vLine + k + endLine);
+
+         k = l;
+
+        System.out.print(
+                firstLine
+                        + vLine + "l = " + l
+                        + vLine + (k + 10)
+                        + vLine + (k - 5)
+                        + vLine + (k * 100) + tab
+                        + vLine + (k / 2)
+                        + vLine + (k % 2)
+                        + vLine + (k * k++)//^2
+                        + vLine + (k--)
+
+        );
+        k--;
+
+        System.out.println(vLine + k + endLine);
+
+        k = m;
+
+        System.out.print(
+                firstLine
+                        + vLine + "m = " + m
+                        + vLine + (k + 10)
+                        + vLine + (k - 5)
+                        + vLine + (k * 100) + tab
+                        + vLine + (k / 2)
+                        + vLine + (k % 2)
+                        + vLine + (k * k++)//^2
+                        + vLine + (k--)
+
+        );
+        k--;
+        System.out.println(vLine + k + endLine + "\n" + firstLine);
 
         System.out.println(line);
         System.out.println(task + (++count));
