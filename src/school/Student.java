@@ -1,6 +1,6 @@
-package lessons;
+package school;
 
-public class Student {
+public class Student extends Person {
         public static void main(String[] args){
             System.out.println("______________Student # 1 ________________________________");
             int age = 10;

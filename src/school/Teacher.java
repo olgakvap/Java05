@@ -1,8 +1,11 @@
-package lessons;
+package school;
 
-public class Teacher {
+public class Teacher extends Person {
 
     public static void main(String[] args){
+        Teacher teacher1 = new Teacher();// creating new object
+        int a = 3;
+        String word = "hello";
 
 //        System.out.println("First name: Maria, " +
 //                "Middle name: Ivanovna, " +
