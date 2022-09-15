@@ -1,5 +1,7 @@
 package homework;
 
+import java.sql.SQLOutput;
+
 public class HW3 {
     public static void main(String[] args){
       // LESSON 3
@@ -196,12 +198,57 @@ public class HW3 {
         System.out.println(line);
         System.out.println(task + (++count));
 
+        System.out.println("\t*-----*--******--*------*-------******---------*------*-------*--------*------*----\n"
+                         + "\t*-----*--*-------*------*-------*----*---------*-----*--*------*------*------*--*---\n"
+                         + "\t*******--*****---*------*-------*----*---------*----******------*----*------******--\n"
+                         + "\t*-----*--*-------*------*-------*----*-----*---*---*------*------*--*------*------*-\n"
+                         + "\t*-----*--******--*****--*****---******------****--*--------*-------*------*--------*\n");
+
+        System.out.println(line);
+        System.out.println(task + (++count));
+
+
+        int t1 = 0;
+        int t2 = 150;
+        int t3 = -130;
+        double t4 = 505.505;
+        int t5 = 100100;
+        long t6 = 100010001000l;
+        double t7 = 2.66666666666666;
+        double t8 = 1000000.001;
+        int t9 = 1010;
+
+        System.out.println(t1);
+        System.out.println(t2);
+        System.out.println(t3);
+        System.out.println(t4);
+        System.out.println(t5);
+        System.out.println(t6);
+        System.out.println(t7);
+        System.out.println(t8);
+        System.out.println(t9);
+
+        System.out.println(line);
+        System.out.println(task + (++count));
+
+        System.out.println("| Type\t\t| Size in bits\t| min\t\t| max\t\t|\n");
+
+
+
+
 
 
 
 
         System.out.println(line);
         System.out.println(task + (++count));
+
+
+
+
+
+
+
 
 
     }
