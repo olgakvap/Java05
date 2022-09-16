@@ -232,6 +232,18 @@ public class HW3 {
         System.out.println(task + (++count));
 
         System.out.println("| Type\t\t| Size in bits\t| min\t\t| max\t\t|\n");
+        System.out.println(line);
+        System.out.println("| byte\t\t| 8\t\t\t\t| -128\t\t| 127\t\t|\n");
+        System.out.println(line);
+        System.out.println("| short\t\t| 8\t\t\t\t| -128\t\t| 127\t\t|\n");
+        System.out.println(line);
+        System.out.println("| int\t\t| 8\t\t\t\t| -128\t\t| 127\t\t|\n");
+        System.out.println(line);
+        System.out.println("| long\t\t| 8\t\t\t\t| -128\t\t| 127\t\t|\n");
+        System.out.println(line);
+        System.out.println("| float\t\t| 8\t\t\t\t| -128\t\t| 127\t\t|\n");
+        System.out.println(line);
+        System.out.println("| double\t| 8\t\t\t\t| -128\t\t| 127\t\t|\n");
 
 
 
