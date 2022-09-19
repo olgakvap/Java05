@@ -24,7 +24,6 @@ public class HW3 {
 //        System.out.println(Integer.min(i1,i2));
 
 
-
         String line = "___________________________________________________";
         String task = "Task # ";
         int count = 1;
