@@ -48,9 +48,12 @@ public class HW3 {
         short t = 32232;
         int diff = s - t;
 
+//        short s = Short.MAX_VALUE;
+//        short t = Short.MAX_VALUE - 60000;
+
         System.out.println(s);
         System.out.println(t);
-        System.out.println(diff);
+        //System.out.println(diff);
 
 
         System.out.println(line);
@@ -63,9 +66,9 @@ public class HW3 {
         System.out.println(line5);
         String vLine = "\t|\t";
 
-        int i = -2147483648;
+         int i = -2147483648;
         System.out.println( " | " + "\tint min" + vLine + i + vLine +  "\n");
-        //System.out.println(line5);
+
         i = 2147483647;
         System.out.println(" | " + "\tint max" + vLine + i + vLine + "\n");
         System.out.println(line5);
@@ -90,7 +93,7 @@ public class HW3 {
 
         System.out.println(line6);
         String vLine2 = "\t|\t";
-        float  f = 100;
+        float  f = 100.101101F;
         double d = 100.101101;
         System.out.println(
                 " | " + "\tfloat f = 100.101101" + vLine2 + f + vLine2 +  "\n");
@@ -107,13 +110,15 @@ public class HW3 {
         Double d2 = 20.09999;
         Double dd = d1 + d2;
         System.out.println("Sum of numbers is : " + dd);
+        //Double dd = new Double(10.09999 + 20.099999); other option
 
         //7.b)Создать переменную типа Float с именем ff и инициализировать её результатом суммы чисел 10.09999 и 20.099999.
-//        System.out.println("\n" + "b)");//7b
-//        Float f1 = 10.09999;
-//        Float f2 = 20.09999;
-//        Float ff = f1 + f2;
-//        System.out.println("Sum of numbers is : " + ff);
+        System.out.println("\n" + "b)");//7b
+        Float ff1 = new Float(10.09999);
+        Float ff2 = new Float(20.09999);
+        Float ff5 = ff1 + ff2;
+        //Float ff = new Float(10.09999F + 20.099999F); other option
+        System.out.println("Sum of numbers is : " + ff5);
 
         System.out.println(line);
         System.out.println(task + (++count));
@@ -197,6 +202,8 @@ public class HW3 {
         System.out.println(line);
         System.out.println(task + (++count));
 
+        //12.Распечатать слова HELLO JAVA точками (чтобы получился рисунок точками)
+
         System.out.println("\t*-----*--******--*------*-------******---------*------*-------*--------*------*----\n"
                          + "\t*-----*--*-------*------*-------*----*---------*-----*--*------*------*------*--*---\n"
                          + "\t*******--*****---*------*-------*----*---------*----******------*----*------******--\n"
@@ -205,7 +212,7 @@ public class HW3 {
 
         System.out.println(line);
         System.out.println(task + (++count));
-
+        //13.Создать переменные подходящего ссылочного типа данных(выбирать минимально достаточный диапазон значений):
 
         int t1 = 0;
         int t2 = 150;
@@ -227,36 +234,53 @@ public class HW3 {
         System.out.println(t8);
         System.out.println(t9);
 
+        System.out.println(line + "______________________________________________________");
+        System.out.println(task + (++count));
+        //14.С помощью полей классов ссылочного типа распечатать таблицу:
+
+        String line3 = "--------------------------------------------------------------------------------------------------------";
+        System.out.println("| Type\t\t| Size in bits\t| min\t\t| max\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t|\n");
+        System.out.println(line3);
+        System.out.println("| byte\t\t| 8\t\t\t\t| -128\t\t\t\t\t| 127\t\t\t\t\t\t\t\t\t\t\t\t|\n");
+        System.out.println(line3);
+        System.out.println("| short\t\t| 16\t\t\t| -32768\t\t\t\t| 32767\t\t\t\t\t\t\t\t\t\t\t\t|\n");
+        System.out.println(line3);
+        System.out.println("| int\t\t| 32\t\t\t| -2147483648\t\t\t| 2147483647\t\t\t\t\t\t\t\t\t\t|\n");
+        System.out.println(line3);
+        System.out.println("| long\t\t| 64\t\t\t| -9223372036854775808\t| 9223372036854775807\t\t\t\t\t\t\t\t|\n");
+        System.out.println(line3);
+        System.out.println("| float\t\t| 32\t\t\t| +/-1.4E-45\t\t\t| +/-3.4028235E+38,+/- infinity,+/-0,NAN\t\t\t|\n");
+        System.out.println(line3);
+        System.out.println("| double\t|64\t\t\t\t| +/-4.9E-324\t\t\t| +/-1.7976931348623157E+308, +/-infinity, +/-0,NaN |\n");
+
+        System.out.println(line +  "______________________________________________________");
+        System.out.println(task + (++count));
+        //15.Создать 2 переменные референсного типа Integer - num1 и num2, присвоить им одинаковые значения,
+        // сравнить 2 переменные друг с другом с помощью метода .equals(). Вывести результат сравнения на печать в виде
+        // выражения: “Если num1 равно  num2, то результат сравнения методом .equals() = …”
+        //Присвоить переменным разные значения, сравнить,  и вывести результат на печать:
+        //“Если num1 не равно num2, то результат сравнения методом .equals() = …
+
+        Integer num1 = 15;
+        Integer num2 = 15;
+
+
+
+
+
+
+
+
+
         System.out.println(line);
         System.out.println(task + (++count));
-
-        System.out.println("| Type\t\t| Size in bits\t| min\t\t| max\t\t|\n");
-        System.out.println(line);
-        System.out.println("| byte\t\t| 8\t\t\t\t| -128\t\t| 127\t\t|\n");
-        System.out.println(line);
-        System.out.println("| short\t\t| 8\t\t\t\t| -128\t\t| 127\t\t|\n");
-        System.out.println(line);
-        System.out.println("| int\t\t| 8\t\t\t\t| -128\t\t| 127\t\t|\n");
-        System.out.println(line);
-        System.out.println("| long\t\t| 8\t\t\t\t| -128\t\t| 127\t\t|\n");
-        System.out.println(line);
-        System.out.println("| float\t\t| 8\t\t\t\t| -128\t\t| 127\t\t|\n");
-        System.out.println(line);
-        System.out.println("| double\t| 8\t\t\t\t| -128\t\t| 127\t\t|\n");
-
-
-
-
+        //16.
 
 
 
 
         System.out.println(line);
         System.out.println(task + (++count));
-
-
-
-
 
 
 
