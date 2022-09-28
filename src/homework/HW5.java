@@ -84,11 +84,11 @@ public class HW5 {
     //Average = 40.
     //Протестируйте алгоритм на позитивные и негативные сценарии.
     public static int averageAgeOfThreeInFamily(int dad, int mom, int child) {
-        if(dad > 0 && dad <150 && mom > 0 && mom < 150 && child > 0 && child < 150){
+        if(dad >= 0 && dad <=150 && mom >= 0 && mom <= 150 && child >= 0 && child <= 150){
             int result = (dad + mom + child) / 3;
             return result;
         }
-        return -1;
+        return Integer.MIN_VALUE;
     }
 
     //4.Найти минимальное  значение, используя переменные (по одному методу на каждый вариант)
@@ -167,13 +167,12 @@ public class HW5 {
     //Но среднемесячная норма не означает, что нельзя работать больше 8 часов в день.
     // Протестируйте метод на позитивные и негативные сценарии.
     public static int salaryCalculation(int workHours, double salaryRangePerHour){
-        if(workHours <=160 && salaryRangePerHour >=12){
-            int salary = (int) (workHours * salaryRangePerHour);
+        if(salaryRangePerHour >=12 && workHours <= 24 && workHours > 0){
+            int salary = (int) (workHours * salaryRangePerHour * 21);
             return salary;
-        }else{
+        }
             return -1;
         }
-    }
     //7.Написать метод, который принимает на вход 2 параметра -  цену и количество товара (количество в штуках).
     // Алгоритм возвращает сумму покупки в виде десятичного числа.
     //price for 1 = 25 руб 50 коп (25.5)
@@ -197,26 +196,17 @@ public class HW5 {
 //Если же на вход придет невалидное данное по зарплате, или зарплата будет рассчитана, как 0, то в ведомости тоже
 // должна быть распечатана пустая строка ""
 //Протестировать метод.
-//    public static String getListOfStaff(String name, double salary){???
-//        int dollars = (int) salary;
-//        int cents =(int) (salary - dollars);
-//        String result = name + "";
-//        if(salary > 0 && name != ""){
-//            return result;
-//        }
-//        return null;
-//    }
-//    public static String getListOfStaff(String name, double salary){?????
-//        int rub = (int) salary;
-//        int kop =(int) (salary - rub);
-//        String result = "";
-//        if(kop > 9){
-//            result = name + rub + "руб " + kop + "коп";
-//        }else{
-//            result = name + rub + "руб " + " 0" + kop + "коп";
-//        }
-//        return result;
-//    }
+    static String nameEployee;
+    static double payrollEmployee;
+    public static String getListOfStaff(String nameEmployee, double payrollEmployee){
+        int rub = (int) Math.floor(payrollEmployee);
+        int kop =(int) Math.ceil(payrollEmployee * 100) - rub * 100;
+        if(nameEmployee ==null || nameEmployee.equals("") || nameEmployee.equals(" ") || payrollEmployee <= 0){
+            return "";
+        }else{
+            return "" + nameEmployee + "   " + rub + " руб " + kop + "коп";
+        }
+    }
 
     //10.Записать в виде метода и протестировать:
     //дано int x
@@ -261,6 +251,15 @@ public class HW5 {
 
             printTCNumber();
             printTestResult(verifyEquals(expectedResult, actualResult));
+            //TC3.1 negative
+            int dad1 = -5;//0-150 age range
+            int mom1 = -30;
+            int child1 = -20;
+            expectedResult = Integer.MIN_VALUE;
+            actualResult = averageAgeOfThreeInFamily(dad1, mom1, child1);
+            verifyEquals(expectedResult, actualResult);
+
+            printTestResult(verifyEquals(expectedResult, actualResult));
 
             //TC4
 
@@ -298,13 +297,22 @@ public class HW5 {
             printTestResult(verifyEquals(expectedResult, actualResult));
 
             //TC6
-            int workHours = 100;
-            double salaryRange = 15;
-            expectedResult = 1500;
+            int workHours = 9;
+            double salaryRange = 12;
+            expectedResult = 2268;
             actualResult = salaryCalculation(workHours,salaryRange);
             verifyEquals(expectedResult,actualResult);
 
             printTCNumber();
+            printTestResult(verifyEquals(expectedResult, actualResult));
+
+            //TC6.1
+            int workHours1 = 10;
+            double salaryRange1 = 10;
+            expectedResult = -1;
+            actualResult = salaryCalculation(workHours1,salaryRange1);
+            verifyEquals(expectedResult,actualResult);
+
             printTestResult(verifyEquals(expectedResult, actualResult));
 
             //TC7
@@ -319,14 +327,16 @@ public class HW5 {
 
             //TC8
          String name = "Смирнова Мария Ивановна";
-         double dollars = -2;
-         double cents = 0;
-         expectedResult2 = name + dollars + "руб" + cents +  "коп";
+         double dollars = 70000.00;
+         expectedResult2 = "Смирнова Мария Ивановна    70000 руб 0 коп";
          actualResult2 = getListOfStaff(name,dollars);
          verifyEquals(expectedResult2, actualResult2);
 
             printTCNumber();
             printTestResult(verifyEquals(expectedResult, actualResult));
+
+
+            //TC9
 
 
 
