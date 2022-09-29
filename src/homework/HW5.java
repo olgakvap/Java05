@@ -259,7 +259,8 @@ public class HW5 {
             actualResult = averageAgeOfThreeInFamily(dad1, mom1, child1);
             verifyEquals(expectedResult, actualResult);
 
-            printTestResult(verifyEquals(expectedResult, actualResult));
+
+            printTestResult("TC_3.1" + "\t -- \t" + verifyEquals(expectedResult, actualResult));
 
             //TC4
 
@@ -275,13 +276,13 @@ public class HW5 {
             actualResult = findMinOfThree(k, l, m);//3
 
 
-            printTestResult(verifyEquals(expectedResult, actualResult));
+            printTestResult("TC_4.1" + "\t -- \t" + verifyEquals(expectedResult, actualResult));
 
 
             expectedResult = 3;
             actualResult = findMinOfFour(k, l, m, n);//4
 
-            printTestResult(verifyEquals(expectedResult, actualResult));
+            printTestResult("TC_4.2" + "\t -- \t" + verifyEquals(expectedResult, actualResult));
 
             //TC5
             double t1 = 39;
@@ -313,7 +314,7 @@ public class HW5 {
             actualResult = salaryCalculation(workHours1,salaryRange1);
             verifyEquals(expectedResult,actualResult);
 
-            printTestResult(verifyEquals(expectedResult, actualResult));
+            printTestResult("TC_6.1" + "\t -- \t" + verifyEquals(expectedResult, actualResult));
 
             //TC7
             double price = 25.50;
