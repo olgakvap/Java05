@@ -216,9 +216,14 @@ public class HW5 {
     // с помощью метода, написанного в задании 8.
     //На этот метод писать тесты не нужно, просто распечатать ведомость.
 
+    public static void printEmployeeSalary(String[] args) {
+        String employeeName = "Смирнова Мария Ивановна";
+        double salaryAmount = 70000.00;
 
+        System.out.println(employeeName + salaryAmount + "\n"
+                + "\t\t\t\tСеребров Иван Петрович      128059 руб 00 коп");
 
-
+    }
 
     //10.Записать в виде метода и протестировать:
     //дано int x
@@ -369,6 +374,7 @@ public class HW5 {
             printTCNumber();
             System.out.println("Смирнова Мария Ивановна    70000 руб 00 коп\n"
                     + "\t\t\t\tСеребров Иван Петрович      128059 руб 00 коп");
+
 
 
 
