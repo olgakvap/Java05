@@ -84,7 +84,7 @@ public class HW5 {
     //Average = 40.
     //Протестируйте алгоритм на позитивные и негативные сценарии.
     public static int averageAgeOfThreeInFamily(int dad, int mom, int child) {
-        if(dad >= 0 && dad <=150 && mom >= 0 && mom <= 150 && child >= 0 && child <= 150){
+        if (dad >= 0 && dad <= 150 && mom >= 0 && mom <= 150 && child >= 0 && child <= 150) {
             int result = (dad + mom + child) / 3;
             return result;
         }
@@ -124,7 +124,7 @@ public class HW5 {
         return min;
     }
 
-//          5.  Написать алгоритм вычисления среднего значения из 5 показателей температуры тела кота. Метод принимает и возвращает значения типа double.
+    //          5.  Написать алгоритм вычисления среднего значения из 5 показателей температуры тела кота. Метод принимает и возвращает значения типа double.
 //            t1 = 39
 //            t2 = 39
 //            t3 = 39
@@ -142,9 +142,9 @@ public class HW5 {
 //            По статистике клиента, некоторые коты могут быть все еще живы при температурах от 25С до 45 С
 //            Протестируйте метод на позитивные и негативные сценарии.
     public static double normalTempOfCat(double temp1, double temp2, double temp3, double temp4, double temp5) {
-        if (temp1 >= 25.0 && temp1 <= 45.0 && temp2>= 25.0 && temp2 <= 45.0 && temp3 >= 25.0 && temp3 <= 45.0
+        if (temp1 >= 25.0 && temp1 <= 45.0 && temp2 >= 25.0 && temp2 <= 45.0 && temp3 >= 25.0 && temp3 <= 45.0
                 && temp4 >= 25.0 && temp4 <= 45.0 && temp5 >= 25.0 && temp5 <= 45.0) {
-            double averageTemp = (temp1 + temp2 + temp3 +temp4 + temp5)/5;
+            double averageTemp = (temp1 + temp2 + temp3 + temp4 + temp5) / 5;
             return averageTemp;
         }
         return -1;
@@ -166,13 +166,14 @@ public class HW5 {
     // https://clubtk.ru/srednee-kolichestvo-rabochikh-dney-v-mesyatse
     //Но среднемесячная норма не означает, что нельзя работать больше 8 часов в день.
     // Протестируйте метод на позитивные и негативные сценарии.
-    public static int salaryCalculation(int workHours, double salaryRangePerHour){
-        if(salaryRangePerHour >=12 && workHours <= 24 && workHours > 0){
+    public static int salaryCalculation(int workHours, double salaryRangePerHour) {
+        if (salaryRangePerHour >= 12 && workHours <= 24 && workHours > 0) {
             int salary = (int) (workHours * salaryRangePerHour * 21);
             return salary;
         }
-            return -1;
-        }
+        return -1;
+    }
+
     //7.Написать метод, который принимает на вход 2 параметра -  цену и количество товара (количество в штуках).
     // Алгоритм возвращает сумму покупки в виде десятичного числа.
     //price for 1 = 25 руб 50 коп (25.5)
@@ -180,16 +181,16 @@ public class HW5 {
     //expected total = 127 руб 50 коп (127.5)
     //При невалидных значениях метод возвращает -1
     // ПРоверьте метод на позитивный и негативный сценарий.
-    public static double purchaseAmount(double price,int quantity){
-        if(price > 0 && quantity > 0){
+    public static double purchaseAmount(double price, int quantity) {
+        if (price > 0 && quantity > 0) {
             double totalPurchase = price * quantity;
-            return  totalPurchase;
-        }else{
+            return totalPurchase;
+        } else {
             return -1;
         }
     }
 
-//  8.Написать метод, который принимает на вход необходимые параметры и возвращает строку ведомости выдачи зарплаты сотрудникам.
+    //  8.Написать метод, который принимает на вход необходимые параметры и возвращает строку ведомости выдачи зарплаты сотрудникам.
 //“Смирнова Мария Ивановна 		70000 руб 00 коп”
 //если имя сотрудника придет в виде пустой строки или в виде null (String -  это референсный тип данных и может
 // принимать значение null), то в ведомости должна быть распечатана пустая строка "".
@@ -198,12 +199,13 @@ public class HW5 {
 //Протестировать метод.
     static String nameEployee;
     static double payrollEmployee;
-    public static String getListOfStaff(String nameEmployee, double payrollEmployee){
+
+    public static String getListOfStaff(String nameEmployee, double payrollEmployee) {
         int rub = (int) Math.floor(payrollEmployee);
-        int kop =(int) Math.ceil(payrollEmployee * 100) - rub * 100;
-        if(nameEmployee ==null || nameEmployee.equals("") || nameEmployee.equals(" ") || payrollEmployee <= 0){
+        int kop = (int) Math.ceil(payrollEmployee * 100) - rub * 100;
+        if (nameEmployee == null || nameEmployee.equals("") || nameEmployee.equals(" ") || payrollEmployee <= 0) {
             return "";
-        }else{
+        } else {
             return "" + nameEmployee + "   " + rub + " руб " + kop + "коп";
         }
     }
@@ -216,28 +218,45 @@ public class HW5 {
     // с помощью метода, написанного в задании 8.
     //На этот метод писать тесты не нужно, просто распечатать ведомость.
 
-    public static void printEmployeeSalary(String[] args) {
-        String employeeName = "Смирнова Мария Ивановна";
-        double salaryAmount = 70000.00;
-
-        System.out.println(employeeName + salaryAmount + "\n"
-                + "\t\t\t\tСеребров Иван Петрович      128059 руб 00 коп");
-
+    public static void printEmployeeSalary(String nameEmployee, double payrollEmployee) {
+        String list = getListOfStaff(nameEmployee, payrollEmployee);
+        System.out.println(list);
     }
+//        String employeeName = "Смирнова Мария Ивановна";
+//        double salaryAmount = 70000.00;
+
+//        public static void printEmployeeSalary1() {
+//            String employeeName1 = "Серебров Иван Петрович";
+//            double salaryAmount1 = 70000.00;
+//
+//        System.out.println(employeeName + salaryAmount + "\n"
+//                + "\t\t\t\temployeeName1 + salaryAmount1");
+
+//}
 
     //10.Записать в виде метода и протестировать:
     //дано int x
-//    String message = "x is negative";
-//    public static int table(int x){
-//        if(x < 0){
-//            return  ;
-//      }else if(x > 0){
-//            return "x is positive";
-//        }else{
-//            return "x is zero";
-//        }
-//    }
-//
+    public static String table(int x){
+        if(x < 0){
+            return "x is negative" ;
+      }else if(x > 0){
+            return "x is positive";
+        }else{
+            return "x is zero";
+        }
+    }
+    //Part2____________________________________________________________________________________________
+    //11.Написать метод, который принимает на вход десятичное число (например, 10.75), и возвращает строку “10 руб 75 коп”.
+    public static String getString(String salaryAmount){
+        String result = " + rub +  руб " + "kop + коп";
+            int rub = (int) Math.floor(payrollEmployee);
+            int kop = (int) Math.ceil(payrollEmployee * 100) - rub * 100;
+        return result ;
+    }
+
+
+
+
 
 
 
@@ -363,17 +382,43 @@ public class HW5 {
             printTCNumber();
             printTestResult(verifyEquals(expectedResult, actualResult));
 
-
             //TC9
-
-            printTCNumber();
-            printTestResult(verifyEquals(expectedResult, actualResult));
-
-
-            //TC10
             printTCNumber();
             System.out.println("Смирнова Мария Ивановна    70000 руб 00 коп\n"
                     + "\t\t\t\tСеребров Иван Петрович      128059 руб 00 коп");
+
+            String employeeName = "Смирнова Мария Ивановна";
+            double salaryAmount = 70000.00;
+            printEmployeeSalary(employeeName,salaryAmount);
+
+            employeeName = "Серебров Иван Петрович";
+            salaryAmount = 128059.00;
+
+            printEmployeeSalary(employeeName,salaryAmount);
+
+            //TC10
+            String text = "x is zero";
+            int x = 0;
+            String expectedResult10 = text;
+            String actualResult10 = table(x);
+            verifyEquals(expectedResult10, actualResult10);
+
+            printTCNumber();
+            printTestResult(verifyEquals(expectedResult10, actualResult10));
+
+            //Part2__________________________________________________________________________
+
+            //TC11
+
+//            double amount = 10.75;
+//            String expectedResult11 = “10 руб 75 коп”;
+//            double actualResult11 = getString(amount);
+//            verifyEquals(expectedResult11, actualResult11);
+//
+//            printTCNumber();
+//            printTestResult(verifyEquals(expectedResult11, actualResult11));
+//
+
 
 
 
