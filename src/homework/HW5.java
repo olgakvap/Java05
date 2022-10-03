@@ -21,9 +21,8 @@ public class HW5 {
     public static String verifyEquals(int expectedResult, int actualResult) {//int
         if (expectedResult == actualResult) {
             return "Pass";
-        } else {
-            return "Fail";
         }
+            return "Fail";
     }
 
     public static String verifyEquals(String expectedResult, String actualResult) {//string
